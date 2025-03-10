@@ -1,0 +1,80 @@
+.saved-recipes {
+  padding: 6rem 2rem 2rem;
+  min-height: 100vh;
+  background: var(--bg-secondary);
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.recipes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.placeholder-message {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.placeholder-message i {
+  font-size: 3rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.placeholder-message h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.placeholder-message p {
+  color: var(--text-secondary);
+}
+
+/* Dark mode styles */
+[data-theme='dark'] .saved-recipes {
+  background: var(--dark-bg-secondary);
+}
+
+[data-theme='dark'] .placeholder-message {
+  background: var(--dark-bg-primary);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .saved-recipes {
+    padding: 5rem 1rem 2rem;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .placeholder-message {
+    padding: 3rem 1rem;
+  }
+} 

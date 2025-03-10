@@ -1,0 +1,42 @@
+.app {
+  min-height: 100vh;
+  background: var(--bg-secondary);
+  transition: background-color var(--transition-normal);
+}
+
+.main-content {
+  padding-top: 64px; /* Height of navbar */
+  min-height: calc(100vh - 64px);
+}
+
+/* Dark mode styles */
+[data-theme='dark'] .app {
+  background: var(--dark-bg-secondary);
+}
+
+/* Loading screen */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.loading-screen i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+/* Error messages */
+.error-message {
+  color: #ff4757;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 71, 87, 0.1);
+  border-radius: var(--radius-md);
+  margin: 1rem 0;
+} 

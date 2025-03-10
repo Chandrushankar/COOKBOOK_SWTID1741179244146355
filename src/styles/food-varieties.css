@@ -1,0 +1,83 @@
+.food-varieties {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--background);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.food-varieties h3 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.food-varieties-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.food-varieties-options ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.food-varieties-options li {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background: var(--background-alt);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  color: var(--text-primary);
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.food-varieties-options li:hover {
+  transform: translateY(-2px);
+  background: var(--primary-500);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .food-varieties {
+    background: var(--background-dark);
+  }
+
+  .food-varieties-options li {
+    background: var(--background-alt-dark);
+  }
+}
+
+/* Responsive design */
+@media screen and (max-width: 1024px) {
+  .food-varieties-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .food-varieties-options {
+    grid-template-columns: 1fr;
+  }
+
+  .food-varieties {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .food-varieties h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+  

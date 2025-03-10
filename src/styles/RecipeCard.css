@@ -1,0 +1,154 @@
+.recipe-card {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.recipe-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.recipe-image {
+  position: relative;
+  width: 100%;
+  padding-top: 66.67%; /* 3:2 aspect ratio */
+  overflow: hidden;
+}
+
+.recipe-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.recipe-card:hover .recipe-image img {
+  transform: scale(1.05);
+}
+
+.recipe-content {
+  padding: 1.5rem;
+}
+
+.recipe-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.recipe-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.meta-icon {
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+.recipe-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.author-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-name {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Dark mode support */
+[data-theme='dark'] .recipe-card {
+  background: var(--dark-bg-primary);
+}
+
+[data-theme='dark'] .recipe-title {
+  color: var(--dark-text-primary);
+}
+
+[data-theme='dark'] .recipe-meta,
+[data-theme='dark'] .author-name {
+  color: var(--dark-text-secondary);
+}
+
+[data-theme='dark'] .recipe-author {
+  border-color: var(--dark-border);
+}
+
+/* Animation */
+.recipe-card-animate {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .recipe-content {
+    padding: 1rem;
+  }
+
+  .recipe-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .recipe-meta {
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .author-avatar {
+    width: 28px;
+    height: 28px;
+  }
+
+  .author-name {
+    font-size: 0.8rem;
+  }
+} 

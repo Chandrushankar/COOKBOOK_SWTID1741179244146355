@@ -1,0 +1,249 @@
+:root{
+    --primary-color: #E67E22;
+    --secondary-color: #8EAC50;
+    --tertiary-color: #F8F5E4;
+    --text:#3E2723;
+}
+
+.Recipie-page{
+    padding-top: 12vh;
+    min-height: 60vh;
+}
+
+.recipie-img{
+
+    width: 100%;
+    padding-top: 2vh;
+}
+
+.recipie-img img{
+
+    width: 98%;
+    margin-left: 1%;
+    height: 85vh;
+    border-radius: 0.7rem;
+}
+
+.recipie-data-container{
+
+    display: grid;
+    grid-template-columns: 65% 25%;
+    justify-content: space-evenly;
+    
+}
+
+.recipie-data{
+
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    position: relative;
+    top: -15vh;
+    background-color: var(--tertiary-color);
+    padding: 4vh 2vw;
+    border-radius: 0.6rem;
+}
+
+
+.recipie-header h4{
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.recipie-header .recipie-specials{
+    display: flex;
+    gap: 10px;
+}
+
+.recipie-header .recipie-specials p{
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    padding: 5px 20px;
+    border-radius: 2rem;
+    font-size: 0.7rem;
+}
+
+.recipie-data .procedure {
+    font-size: 16px; 
+    line-height: 1.6; 
+    color: #333; 
+    padding: 15px;
+    background-color: var(--tertiary-color); 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.recipie-data .procedure h5{
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0;
+    padding-top: 3vh;
+}
+
+
+.recipie-data .procedure p{
+    margin: 0;
+    font-size: 0.9rem;   
+}
+
+.youtube-video-container {
+    position: relative;
+    width: 100%; 
+    max-width: 800px; 
+    margin: 20px auto; 
+    overflow: hidden;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.youtube-video-container iframe {
+    width: 100%;
+    height: 450px; 
+    border: none; 
+}
+
+.youtube-video-container:hover {
+    transform: scale(1.02); 
+    transition: transform 0.3s ease-in-out;
+}
+.youtube-video-container h5{
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0;
+    padding-top: 3vh;
+}
+
+
+
+
+.ingredients-container{
+
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    position: relative;
+    top: -15vh;
+    background-color: var(--tertiary-color);
+    padding: 4vh 2vw;
+    border-radius: 0.6rem;
+    height: fit-content;
+}
+
+.ingredients-container h3{
+    margin: 0;
+    padding-bottom: 1vh;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.ingredients{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+}
+
+.ingredient{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ingredient h5{
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 400;
+    max-width: 50%;
+}
+
+.ingredient p{
+    margin: 0;
+    font-size: 0.8rem;
+    max-width: 40%;
+}
+
+/* Add responsive styles */
+@media (max-width: 1024px) {
+    .recipie-data-container {
+        grid-template-columns: 60% 35%;
+        gap: 2vw;
+    }
+
+    .recipie-img img {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .recipie-data-container {
+        grid-template-columns: 100%;
+    }
+
+    .ingredients-container {
+        top: 0;
+        margin-top: 2rem;
+    }
+
+    .recipie-img img {
+        height: 40vh;
+    }
+
+    .recipie-data {
+        top: 0;
+        margin-top: 2rem;
+    }
+
+    .youtube-video-container iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .recipie-header h4 {
+        font-size: 1.2rem;
+    }
+
+    .recipie-specials {
+        flex-wrap: wrap;
+    }
+
+    .ingredient {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .ingredient h5, .ingredient p {
+        max-width: 100%;
+    }
+
+    .youtube-video-container iframe {
+        height: 250px;
+    }
+}
+
+/* Add loading and error states styling */
+.loading, .error {
+    text-align: center;
+    padding: 2rem;
+    background: var(--tertiary-color);
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.loading {
+    color: var(--secondary-color);
+}
+
+.error {
+    color: #e74c3c;
+}
+
+/* Add animation for loading state */
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.loading {
+    animation: pulse 1.5s infinite ease-in-out;
+}
